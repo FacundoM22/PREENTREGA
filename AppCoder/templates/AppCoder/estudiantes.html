@@ -1,0 +1,26 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+
+    <h1>Estudiantes</h1>
+    <form action="estudiantes" method="POST"> 
+        {% csrf_token %}
+        <p>Nombre:</p>
+        <input type="text" name="nombre">
+        <p>Apellido:</p>
+        <input type="text" name="apellido">
+        <p>Email:</p>
+        <input type="email" name="email">
+       
+        <input type="submit" value="Send">
+       
+       </form>
+
+
+  
+
+{% endblock %}
